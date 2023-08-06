@@ -1,7 +1,10 @@
+import Navbar from "../../components/navbar";
+import "./index.scss";
+
 export default function Destination() {
   return (
-    <>
-      <h1>Destination Page</h1>
-    </>
+    <section id="destination">
+      <Navbar />
+    </section>
   );
 }

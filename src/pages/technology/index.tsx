@@ -1,7 +1,10 @@
+import Navbar from "../../components/navbar";
+import "./index.scss";
+
 export default function Technology() {
   return (
-    <>
-      <h1>Technology Page</h1>
-    </>
+    <section id="technology">
+      <Navbar />
+    </section>
   );
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -10,4 +10,8 @@
 section {
   width: 100%;
   min-height: 100vh;
+}
+
+body {
+  color: white;
 }

@@ -1,7 +1,10 @@
+import Navbar from "../../components/navbar";
+import "./index.scss";
+
 export default function Crew() {
   return (
-    <>
-      <h1>Crew Page</h1>
-    </>
+    <section id="crew">
+      <Navbar />
+    </section>
   );
 }
