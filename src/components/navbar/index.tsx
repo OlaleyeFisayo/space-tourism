@@ -1,8 +1,17 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/logo.svg";
+import hamburgerIcon from "../../assets/shared/icon-hamburger.svg";
+import closedIcon from "../../assets/shared/icon-close.svg";
 import "./index.scss";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [toggle, setToggle] = useState(false);
+
+  const changeToggle = () => {
+    setToggle((prevState) => !prevState);
+  };
+
   return (
     <div className="nav-container">
       <nav id="desktop-view">
@@ -10,45 +19,101 @@ export default function Navbar() {
         <ul className="nav-list">
           <li>
             <NavLink
-              className={({ isActive }) => isActive ? "active" : ""}
+              className={({ isActive }) => (isActive ? "active" : "")}
               to=".."
             >
               <p>
-                <span className="bold">01</span>Home
+                <span className="bold">00</span>Home
               </p>
             </NavLink>
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => isActive ? "active" : ""}
+              className={({ isActive }) => (isActive ? "active" : "")}
               to="/destination"
             >
               <p>
-                <span className="bold">02</span>Destination
+                <span className="bold">01</span>Destination
               </p>
             </NavLink>
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => isActive ? "active" : ""}
+              className={({ isActive }) => (isActive ? "active" : "")}
               to="/crew"
             >
               <p>
-                <span className="bold">03</span>crew
+                <span className="bold">02</span>crew
               </p>
             </NavLink>
           </li>
           <li>
             <NavLink
-              className={({ isActive }) => isActive ? "active" : ""}
+              className={({ isActive }) => (isActive ? "active" : "")}
               to="/technology"
             >
               <p>
-                <span className="bold">04</span>Technology
+                <span className="bold">03</span>Technology
               </p>
             </NavLink>
           </li>
         </ul>
+      </nav>
+
+      <nav id="mobile-view">
+        <div className="img-container">
+          <img src={logo} alt="Logo" loading="lazy" />
+        </div>
+        <div className="hamburger" role="button" onClick={changeToggle}>
+          <img src={hamburgerIcon} alt="hamburger icon" loading="lazy" />
+        </div>
+        <div className={toggle ? "nav" : "nav active"}>
+          <div className="img-container" role="button" onClick={changeToggle}>
+            <img src={closedIcon} alt="closed icon" loading="lazy" />
+          </div>
+          <ul className="nav-list">
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to=".."
+              >
+                <p>
+                  <span className="bold">00</span>Home
+                </p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/destination"
+              >
+                <p>
+                  <span className="bold">01</span>Destination
+                </p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/crew"
+              >
+                <p>
+                  <span className="bold">02</span>crew
+                </p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/technology"
+              >
+                <p>
+                  <span className="bold">03</span>Technology
+                </p>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );

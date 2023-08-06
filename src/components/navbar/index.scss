@@ -61,6 +61,10 @@
     }
   }
 
+  #mobile-view {
+    display: none;
+  }
+
   @media (max-width: 1320px) {
     #desktop-view {
       .line {
@@ -112,5 +116,114 @@
 
   @media (max-width: 860px) {
     padding: 0 0 0 2.44rem;
+  }
+
+  @media (max-width: 610px) {
+    #desktop-view {
+      display: none;
+    }
+
+    #mobile-view {
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      .img-container {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .hamburger {
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.3125rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40.774227142333984px);
+        z-index: 1;
+        padding: 2.12rem 1.65rem !important;
+        transition: 500ms ease-in-out;
+        transform: translateX(100%);
+
+        .img-container {
+          width: 100%;
+          display: flex;
+          justify-content: right;
+          img {
+            cursor: pointer;
+            width: 1.19325rem;
+            height: 1.19325rem;
+          }
+        }
+
+        .nav-list {
+          margin-top: 4rem;
+
+          li {
+            list-style: none;
+            margin-bottom: 2rem;
+            height: 1.9375rem;
+
+            a {
+              text-decoration: none;
+              cursor: pointer;
+              color: #ffffff;
+              display: block;
+              height: inherit;
+              display: flex;
+              align-items: center;
+
+              p {
+                font-family: "Barlow Condensed";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.16875rem;
+                text-transform: uppercase;
+
+                .bold {
+                  font-weight: 700;
+                  margin-right: 0.69rem;
+                }
+              }
+            }
+
+            a.active {
+              border-right: 0.1875rem solid;
+              opacity: 1 !important;
+            }
+
+            a:hover {
+              border-right: 0.1875rem solid;
+              opacity: 0.5021;
+            }
+          }
+        }
+      }
+
+      .nav.active {
+        transform: translateX(0);
+      }
+    }
   }
 }
