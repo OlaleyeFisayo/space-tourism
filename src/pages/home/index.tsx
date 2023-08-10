@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section id="home">
       <Navbar />
-      <section className="box">
+      <section className="home-content">
         <section className="text-side">
           <h2>So, you want to travel to</h2>
           <h1>Space</h1>
