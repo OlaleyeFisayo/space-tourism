@@ -1,8 +1,9 @@
 .destinations {
+  max-width: 1400px !important;
+  width: 100% !important;
   display: flex;
   justify-content: space-between;
-  gap: 0.5rem;
-  width: 100%;
+  gap: 1rem;
   height: auto;
 
   .img-side {

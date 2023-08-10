@@ -2,9 +2,13 @@ import "./index.scss";
 import moonDesktop from "../../assets/destination/image-moon.png";
 import moonMobile from "../../assets/destination/image-moon.webp";
 
-export default function Destinations() {
+interface props {
+  id: string;
+}
+
+export default function Destinations({ id }: props) {
   return (
-    <section className="destinations">
+    <section className="destinations" id={id}>
       <section className="img-side">
         <picture>
           <source media="(max-width: 485px)" srcSet={moonMobile} />
