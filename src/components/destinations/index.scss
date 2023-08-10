@@ -1,0 +1,72 @@
+.destinations {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  height: auto;
+
+  .img-side {
+    max-width: 27.8125rem;
+    width: 100%;
+
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text-side {
+    max-width: 27.8125rem;
+    width: 100%;
+    padding-top: 2.31rem;
+
+    .destination-name {
+      color: #fff;
+      font-family: "Bellefair";
+      font-size: 6.25rem;
+      font-weight: 400;
+      margin-bottom: 0.87rem;
+      text-transform: uppercase;
+    }
+
+    .destination-detail {
+      color: #d0d6f9;
+      font-family: "Barlow";
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
+
+    .line {
+      width: 100%;
+      height: 0.0625rem;
+      background: #383b4b;
+      margin: 3.38rem 0 1.75rem;
+    }
+
+    .distance {
+      display: flex;
+      gap: 4.94rem;
+
+      section {
+        h1 {
+          margin-bottom: 0.79rem;
+          color: #d0d6f9;
+          font-family: "Barlow Condensed";
+          font-size: 0.875rem;
+          font-weight: 400;
+          letter-spacing: 0.14763rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #fff;
+          font-family: "Bellefair";
+          font-size: 1.75rem;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
