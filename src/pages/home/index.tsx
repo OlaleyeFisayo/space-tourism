@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <section id="home">
       <Navbar />
-      <div className="box">
-        <div className="text-side">
+      <section className="box">
+        <section className="text-side">
           <h2>So, you want to travel to</h2>
           <h1>Space</h1>
           <p>
@@ -16,12 +16,12 @@ export default function Home() {
             Well sit back, and relax because we’ll give you a truly out of this
             world experience!
           </p>
-        </div>
+        </section>
 
-        <div className="button-side">
+        <section className="button-side">
           <NavLink to="destination">Explore</NavLink>
-        </div>
-      </div>
+        </section>
+      </section>
     </section>
   );
 }
