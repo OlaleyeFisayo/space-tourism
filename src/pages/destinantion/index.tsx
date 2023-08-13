@@ -1,6 +1,7 @@
 import Destinations from "../../components/destinations";
 import Navbar from "../../components/navbar";
 import "./index.scss";
+import data from "./data";
 
 export default function Destination() {
   return (
@@ -14,8 +15,20 @@ export default function Destination() {
 
         <section className="destination-container">
           <section className="destinations-container">
-            <Destinations id="moon"/>
-            {/* <Destinations id="mars"/> */}
+            {data.map((destination) => {
+              const { name, images, description, distance, travel } =
+                destination;
+              return (
+                <Destinations
+                  key={name}
+                  active={name}
+                  images={images}
+                  description={description}
+                  distance={distance}
+                  travel={travel}
+                />
+              );
+            })}
           </section>
         </section>
       </section>
