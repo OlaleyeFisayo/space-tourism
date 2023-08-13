@@ -77,11 +77,6 @@
       .destinations-container {
         max-width: 1400px;
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        overflow: hidden;
-        display: flex;
-
       }
     }
   }
