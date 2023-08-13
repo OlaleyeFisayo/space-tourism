@@ -11,11 +11,20 @@ export default function Destinations({ id }: props) {
     <section className="destinations" id={id}>
       <section className="img-side">
         <picture>
-          <source media="(max-width: 485px)" srcSet={moonMobile} />
+          <source media="(max-width: 700px)" srcSet={moonMobile} />
           <img src={moonDesktop} alt="moon" />
         </picture>
       </section>
       <section className="text-side">
+        <section className="destinations-list">
+          <ul>
+            <li className="active">moon</li>
+            <li>mars</li>
+            <li>europa</li>
+            <li>titan</li>
+          </ul>
+        </section>
+
         <h1 className="destination-name">moon</h1>
         <p className="destination-detail">
           See our planet as you’ve never seen it before. A perfect relaxing trip

@@ -3,11 +3,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 630px) {
     background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
 
@@ -17,6 +17,10 @@
     margin: auto;
     padding: 4.75rem 6.94rem;
 
+    @media (max-width: 500px) {
+      padding: 2.12rem 1.5rem;
+    }
+
     .header {
       color: #fff;
       font-family: "Barlow Condensed";
@@ -24,6 +28,12 @@
       font-weight: 400;
       letter-spacing: 0.29531rem;
       text-transform: uppercase;
+
+      @media (max-width: 500px) {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 0.16875rem;
+      }
 
       .number {
         font-weight: 700;
@@ -35,48 +45,11 @@
     .destination-container {
       margin-top: 4rem;
 
-      .destinations-list {
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        padding-right: 9.97rem;
-
-        ul {
-          display: flex;
-          gap: 2.19rem;
-
-          li {
-            list-style: none;
-
-            a {
-              text-decoration: none;
-              text-transform: uppercase;
-              color: #d0d6f9;
-              font-family: "Barlow Condensed";
-              font-size: 1rem;
-              font-weight: 400;
-              letter-spacing: 0.16875rem;
-              padding-bottom: 0.73rem;
-              cursor: pointer;
-            }
-
-            a.active {
-              border-bottom: 0.1875rem solid #fff !important;
-              color: #fff !important;
-              opacity: 1 !important;
-            }
-
-            a:hover {
-              border-bottom: 0.1875rem solid #d0d6f9;
-              opacity: 0.5;
-            }
-          }
-        }
-      }
-
       .destinations-container {
-        max-width: 1400px;
-        width: 100%;
+        // max-width: 1400px;
+        // width: 100%;
+        // display: flex;
+        // // overflow: hidden;
       }
     }
   }
