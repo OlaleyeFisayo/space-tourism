@@ -9,6 +9,7 @@ interface props {
   description: string;
   distance: string;
   travel: string;
+  changeDestination(prop: string): void;
 }
 
 export default function Destinations({
@@ -17,6 +18,7 @@ export default function Destinations({
   description,
   distance,
   travel,
+  changeDestination,
 }: props) {
   return (
     <section className="destinations">
@@ -29,10 +31,30 @@ export default function Destinations({
       <section className="text-side">
         <section className="destinations-list">
           <ul>
-            <li className={active === "moon" ? "active" : ""}>moon</li>
-            <li className={active === "mars" ? "active" : ""}>mars</li>
-            <li className={active === "europa" ? "active" : ""}>europa</li>
-            <li className={active === "titan" ? "active" : ""}>titan</li>
+            <li
+              className={active === "moon" ? "active" : ""}
+              onClick={() => changeDestination("moon")}
+            >
+              moon
+            </li>
+            <li
+              className={active === "mars" ? "active" : ""}
+              onClick={() => changeDestination("mars")}
+            >
+              mars
+            </li>
+            <li
+              className={active === "europa" ? "active" : ""}
+              onClick={() => changeDestination("europa")}
+            >
+              europa
+            </li>
+            <li
+              className={active === "titan" ? "active" : ""}
+              onClick={() => changeDestination("titan")}
+            >
+              titan
+            </li>
           </ul>
         </section>
 
