@@ -2,19 +2,19 @@ import "./index.scss";
 
 interface CrewsProps {
   id: number;
-  position: string;
+  role: string;
   name: string;
   details: string;
   image: {
     webp: string;
-    jpg: string;
+    png: string;
   };
   handleCrewChange: (id: number) => void;
 }
 
 export default function Crews({
   id,
-  position,
+  role,
   name,
   details,
   image,
@@ -24,7 +24,7 @@ export default function Crews({
     <section className="crews">
       <section className="text-side">
         <section className="details">
-          <h1 className="crew-member-position">{position}</h1>
+          <h1 className="crew-member-role">{role}</h1>
           <h2 className="crew-memeber-name">{name}</h2>
           <p className="crew-member-details">{details}</p>
         </section>
@@ -54,7 +54,7 @@ export default function Crews({
             type="image/webp"
             media="max-width: 730px"
           />
-          <img src={image.jpg} alt="Crew member 1" />
+          <img src={image.png} alt="Crew member 1" />
         </picture>
       </section>
     </section>
