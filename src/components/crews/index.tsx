@@ -1,35 +1,60 @@
-import propImage from "../../assets/crew/image-anousheh-ansari.png";
-import propImagewebp from "../../assets/crew/image-anousheh-ansari.webp";
 import "./index.scss";
 
-export default function Crews() {
+interface CrewsProps {
+  id: number;
+  position: string;
+  name: string;
+  details: string;
+  image: {
+    webp: string;
+    jpg: string;
+  };
+  handleCrewChange: (id: number) => void;
+}
+
+export default function Crews({
+  id,
+  position,
+  name,
+  details,
+  image,
+  handleCrewChange,
+}: CrewsProps) {
   return (
     <section className="crews">
       <section className="text-side">
         <section className="details">
-          <h1 className="crew-member-position">commander</h1>
-          <h2 className="crew-memeber-name">douglas hurley</h2>
-          <p className="crew-member-details">
-            Douglas Gerald Hurley is an American engineer, former Marine Corps
-            pilot and former NASA astronaut. He launched into space for the
-            third time as commander of Crew Dragon Demo-2.
-          </p>
+          <h1 className="crew-member-position">{position}</h1>
+          <h2 className="crew-memeber-name">{name}</h2>
+          <p className="crew-member-details">{details}</p>
         </section>
         <ul className="crew-member-toggle">
-          <li className="active"></li>
-          <li className="item"></li>
-          <li className="item"></li>
-          <li className="item"></li>
+          <li
+            className={id === 1 ? "active" : ""}
+            onClick={() => handleCrewChange(1)}
+          ></li>
+          <li
+            className={id === 2 ? "active" : ""}
+            onClick={() => handleCrewChange(2)}
+          ></li>
+          <li
+            className={id === 3 ? "active" : ""}
+            onClick={() => handleCrewChange(3)}
+          ></li>
+          <li
+            className={id === 4 ? "active" : ""}
+            onClick={() => handleCrewChange(4)}
+          ></li>
         </ul>
       </section>
       <section className="img-side">
         <picture>
           <source
-            srcSet={propImagewebp}
+            srcSet={image.webp}
             type="image/webp"
             media="max-width: 730px"
           />
-          <img src={propImage} alt="Crew member 1" />
+          <img src={image.jpg} alt="Crew member 1" />
         </picture>
       </section>
     </section>
