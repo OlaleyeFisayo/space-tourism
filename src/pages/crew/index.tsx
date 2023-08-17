@@ -77,7 +77,6 @@ export default function Crew() {
         <h1 className="header">
           <span className="number">02</span> Meet your crew
         </h1>
-        {/* <Crews /> */}
         {renderCrews()}
       </section>
     </section>
