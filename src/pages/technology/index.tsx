@@ -1,4 +1,5 @@
 import Navbar from "../../components/navbar";
+import Technologies from "../../components/technologies";
 import "./index.scss";
 
 export default function Technology() {
@@ -9,6 +10,8 @@ export default function Technology() {
         <h1 className="header">
           <span className="number">03</span>Space Lanuch 101
         </h1>
+
+        <Technologies />
       </section>
     </section>
   );
