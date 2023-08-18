@@ -54,7 +54,7 @@ export default function Crews({
             type="image/webp"
             media="max-width: 730px"
           />
-          <img src={image.png} alt="Crew member 1" loading="lazy" />
+          <img src={image.png} alt="Crew member 1" />
         </picture>
       </section>
     </section>

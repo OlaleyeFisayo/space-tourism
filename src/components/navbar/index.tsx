@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <section className="nav-container">
       <nav id="desktop-view">
-        <img src={logo} alt="Logo" loading="lazy" />
+        <img src={logo} alt="Logo" />
         <ul className="nav-list">
           <li>
             <NavLink
@@ -62,10 +62,10 @@ export default function Navbar() {
 
       <nav id="mobile-view">
         <section className="img-container">
-          <img src={logo} alt="Logo" loading="lazy" />
+          <img src={logo} alt="Logo" />
         </section>
         <section className="hamburger" role="button" onClick={changeToggle}>
-          <img src={hamburgerIcon} alt="hamburger icon" loading="lazy" />
+          <img src={hamburgerIcon} alt="hamburger icon" />
         </section>
         <section className={toggle ? "nav" : "nav active"}>
           <section
@@ -73,7 +73,7 @@ export default function Navbar() {
             role="button"
             onClick={changeToggle}
           >
-            <img src={closedIcon} alt="closed icon" loading="lazy" />
+            <img src={closedIcon} alt="closed icon" />
           </section>
           <ul className="nav-list">
             <li>
