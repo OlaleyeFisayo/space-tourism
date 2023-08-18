@@ -12,10 +12,14 @@
   }
 
   .technology-content {
-    padding: 4.75rem 0 0 6.94rem;
+    padding: 4.75rem 0 4.75rem 6.94rem;
     max-width: 1400px;
     width: 100%;
     margin: auto;
+
+    @media (max-width: 1200px) {
+      padding: 2.5rem 0;
+    }
 
     .header {
       color: #fff;
@@ -24,6 +28,19 @@
       font-weight: 400;
       letter-spacing: 0.29531rem;
       text-transform: uppercase;
+
+      @media (max-width: 1200px) {
+        padding-left: 2.41rem;
+        font-size: 1.25rem;
+        letter-spacing: 0.21rem;
+      }
+
+      @media (max-width: 730px) {
+        text-align: center;
+        padding-left: 0;
+        font-size: 1rem;
+        letter-spacing: 0.17rem;
+      }
 
       .number {
         font-size: 700;

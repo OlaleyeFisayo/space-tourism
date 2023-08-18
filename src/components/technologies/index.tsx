@@ -12,7 +12,7 @@ export default function Technologies() {
           <li>3</li>
         </ul>
         <section className="about">
-          <h1>The technology</h1>
+          <h1>The technology...</h1>
           <h2>Launch vehicle</h2>
           <p>
             A launch vehicle or carrier rocket is a rocket-propelled vehicle
@@ -25,7 +25,7 @@ export default function Technologies() {
       </section>
       <section className="img-side">
         <picture>
-          <source media="(min-width: 730px)" srcSet={imgPortrait} />
+          <source media="(min-width: 1200px)" srcSet={imgPortrait} />
           <img src={imgLandscape} alt="" loading="lazy" />
         </picture>
       </section>
