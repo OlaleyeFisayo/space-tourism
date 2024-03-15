@@ -20,8 +20,7 @@ export default function Navbar() {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "")}
-              to=".."
-            >
+              to=".."            >
               <p>
                 <span className="bold">00</span>Home
               </p>

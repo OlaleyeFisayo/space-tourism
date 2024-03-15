@@ -8,6 +8,7 @@
     align-items: center;
     gap: 4rem;
     position: relative;
+    z-index: 10000;
     img {
       width: 3rem;
       height: 3rem;
@@ -23,11 +24,13 @@
       li {
         list-style: none;
         a {
+          position: relative;
           text-decoration: none;
           padding: 2.35rem 0;
           cursor: pointer;
           color: #ffffff;
           display: block;
+          overflow-x: hidden;
           p {
             font-family: "Barlow Condensed";
             font-size: 1rem;
@@ -44,10 +47,26 @@
           &.active {
             border-bottom: 0.1875rem solid;
             opacity: 1 !important;
+            &::after {
+              transform: translateX(-100%) !important;
+            }
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-bottom: 0.1875rem solid;
+            top: -3px;
+            transform: translateX(-100%);
+            transition: 500ms ease-in-out;
+            opacity: 0.5021;
           }
           &:hover {
-            border-bottom: 0.1875rem solid;
             opacity: 0.5021;
+            &::after {
+              transform: translateX(0%);
+            }
           }
         }
       }
@@ -55,6 +74,7 @@
   }
   #mobile-view {
     display: none;
+    z-index: 10000 !important;
   }
   @media (max-width: 1320px) {
     #desktop-view {
