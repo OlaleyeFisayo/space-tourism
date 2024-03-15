@@ -1,19 +1,17 @@
 .nav-container {
   padding: 2.5rem 0 0 3.44rem;
-
   #desktop-view {
+    width: 100%;
     height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
     position: relative;
-
     img {
       width: 3rem;
       height: 3rem;
     }
-
     .nav-list {
       background: rgba(255, 255, 255, 0.04);
       backdrop-filter: blur(40.774227142333984px);
@@ -22,17 +20,14 @@
       align-items: center;
       padding: 0 10.4rem 0 7.7rem;
       gap: 3.13rem;
-
       li {
         list-style: none;
-
         a {
           text-decoration: none;
           padding: 2.35rem 0;
           cursor: pointer;
           color: #ffffff;
           display: block;
-
           p {
             font-family: "Barlow Condensed";
             font-size: 1rem;
@@ -41,30 +36,26 @@
             line-height: normal;
             letter-spacing: 0.16875rem;
             text-transform: uppercase;
-
             .bold {
               font-weight: 700;
               margin-right: 0.69rem;
             }
           }
-        }
-        a.active {
-          border-bottom: 0.1875rem solid;
-          opacity: 1 !important;
-        }
-
-        a:hover {
-          border-bottom: 0.1875rem solid;
-          opacity: 0.5021;
+          &.active {
+            border-bottom: 0.1875rem solid;
+            opacity: 1 !important;
+          }
+          &:hover {
+            border-bottom: 0.1875rem solid;
+            opacity: 0.5021;
+          }
         }
       }
     }
   }
-
   #mobile-view {
     display: none;
   }
-
   @media (max-width: 1320px) {
     #desktop-view {
       .line {
@@ -74,7 +65,6 @@
       }
     }
   }
-
   @media (max-width: 1200px) {
     #desktop-view {
       .line {
@@ -84,7 +74,6 @@
       }
     }
   }
-
   @media (max-width: 1150px) {
     #desktop-view {
       .line {
@@ -92,15 +81,12 @@
       }
     }
   }
-
-  @media (max-width: 1010px) {
+  @media (max-width: 1022px) {
     #desktop-view {
       gap: 2rem;
-
       .nav-list {
         padding: 0 3rem;
         gap: 2.31rem;
-
         li {
           a {
             p {
@@ -113,46 +99,37 @@
       }
     }
   }
-
   @media (max-width: 860px) {
     padding: 0 0 0 2.44rem;
   }
-
   @media (max-width: 730px) {
     padding: 0;
-
     #desktop-view {
       display: none;
     }
-
     #mobile-view {
       padding: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: relative;
-
       .img-container {
         width: 2.5rem;
         height: 2.5rem;
-
         img {
           width: 100%;
           height: 100%;
         }
       }
-
       .hamburger {
         cursor: pointer;
         width: 1.5rem;
         height: 1.3125rem;
-
         img {
           width: 100%;
           height: 100%;
         }
       }
-
       .nav {
         position: fixed;
         top: 0;
@@ -165,7 +142,6 @@
         padding: 2.12rem 1.65rem !important;
         transition: 500ms ease-in-out;
         transform: translateX(100%);
-
         .img-container {
           width: 100%;
           display: flex;
@@ -176,15 +152,12 @@
             height: 1.19325rem;
           }
         }
-
         .nav-list {
           margin-top: 4rem;
-
           li {
             list-style: none;
             margin-bottom: 2rem;
             height: 1.9375rem;
-
             a {
               text-decoration: none;
               cursor: pointer;
@@ -193,7 +166,6 @@
               height: inherit;
               display: flex;
               align-items: center;
-
               p {
                 font-family: "Barlow Condensed";
                 font-size: 1rem;
@@ -208,21 +180,18 @@
                   margin-right: 0.69rem;
                 }
               }
-            }
-
-            a.active {
-              border-right: 0.1875rem solid;
-              opacity: 1 !important;
-            }
-
-            a:hover {
-              border-right: 0.1875rem solid;
-              opacity: 0.5021;
+              &.active {
+                border-right: 0.1875rem solid;
+                opacity: 1 !important;
+              }
+              &:hover {
+                border-right: 0.1875rem solid;
+                opacity: 0.5021;
+              }
             }
           }
         }
       }
-
       .nav.active {
         transform: translateX(0);
       }
