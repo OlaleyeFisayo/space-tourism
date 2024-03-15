@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./index.scss";
 
 interface props {
@@ -20,10 +21,19 @@ export default function Destinations({
   travel,
   changeDestination,
 }: props) {
+  const [isVisibile, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(false);
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 400);
+  }, [active]);
+
   return (
-    <section className="destinations">
-      <section className="img-side">
-        <picture>
+    <section className={`destinations`}>
+      <section className={`img-side ${isVisibile ? "fade-in" : ""}`}>
+        <picture className={`${isVisibile ? "fade-in" : ""}`}>
           <source media="(max-width: 700px)" srcSet={images.webp} />
           <img src={images.png} alt={active} />
         </picture>
@@ -58,17 +68,21 @@ export default function Destinations({
           </ul>
         </section>
 
-        <h1 className="destination-name">{active}</h1>
-        <p className="destination-detail">{description}</p>
+        <h1 className={`destination-name ${isVisibile ? "fade-in" : ""}`}>
+          {active}
+        </h1>
+        <p className={`destination-detail ${isVisibile ? "fade-in" : ""}`}>
+          {description}
+        </p>
         <div className="line"></div>
         <section className="distance">
           <section>
             <h1>avg. distance</h1>
-            <p>{distance}</p>
+            <p className={`${isVisibile ? "fade-in" : ""}`}>{distance}</p>
           </section>
           <section>
             <h1>est. travel time</h1>
-            <p>{travel}</p>
+            <p className={`${isVisibile ? "fade-in" : ""}`}>{travel}</p>
           </section>
         </section>
       </section>
