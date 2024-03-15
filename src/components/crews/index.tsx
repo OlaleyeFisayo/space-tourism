@@ -1,4 +1,5 @@
 import "./index.scss";
+import { useFadeIn } from "../../hook/useFadeIn";
 
 interface CrewsProps {
   id: number;
@@ -20,13 +21,21 @@ export default function Crews({
   image,
   handleCrewChange,
 }: CrewsProps) {
+  const { isFadeIn } = useFadeIn(id);
+
   return (
     <section className="crews">
       <section className="text-side">
         <section className="details">
-          <h1 className="crew-member-role">{role}</h1>
-          <h2 className="crew-memeber-name">{name}</h2>
-          <p className="crew-member-details">{details}</p>
+          <h1 className={`crew-member-role ${isFadeIn ? "fade-in" : ""}`}>
+            {role}
+          </h1>
+          <h2 className={`crew-memeber-name ${isFadeIn ? "fade-in" : ""}`}>
+            {name}
+          </h2>
+          <p className={`crew-member-details ${isFadeIn ? "fade-in" : ""}`}>
+            {details}
+          </p>
         </section>
         <ul className="crew-member-toggle">
           <li
@@ -47,7 +56,7 @@ export default function Crews({
           ></li>
         </ul>
       </section>
-      <section className="img-side">
+      <section className={`img-side ${isFadeIn ? "fade-in" : ""}`}>
         <picture>
           <source
             srcSet={image.webp}

@@ -20,3 +20,8 @@
 body {
   color: white;
 }
+
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in-out;
+}

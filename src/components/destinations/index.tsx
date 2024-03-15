@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useFadeIn } from "../../hook/useFadeIn";
 import "./index.scss";
 
 interface props {
@@ -21,19 +21,12 @@ export default function Destinations({
   travel,
   changeDestination,
 }: props) {
-  const [isVisibile, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(false);
-    setTimeout(() => {
-      setIsVisible(true);
-    }, 400);
-  }, [active]);
+  const { isFadeIn } = useFadeIn(active);
 
   return (
     <section className={`destinations`}>
-      <section className={`img-side ${isVisibile ? "fade-in" : ""}`}>
-        <picture className={`${isVisibile ? "fade-in" : ""}`}>
+      <section className={`img-side ${isFadeIn ? "fade-in" : ""}`}>
+        <picture className={`${isFadeIn ? "fade-in" : ""}`}>
           <source media="(max-width: 700px)" srcSet={images.webp} />
           <img src={images.png} alt={active} />
         </picture>
@@ -68,21 +61,21 @@ export default function Destinations({
           </ul>
         </section>
 
-        <h1 className={`destination-name ${isVisibile ? "fade-in" : ""}`}>
+        <h1 className={`destination-name ${isFadeIn ? "fade-in" : ""}`}>
           {active}
         </h1>
-        <p className={`destination-detail ${isVisibile ? "fade-in" : ""}`}>
+        <p className={`destination-detail ${isFadeIn ? "fade-in" : ""}`}>
           {description}
         </p>
         <div className="line"></div>
         <section className="distance">
           <section>
             <h1>avg. distance</h1>
-            <p className={`${isVisibile ? "fade-in" : ""}`}>{distance}</p>
+            <p className={`${isFadeIn ? "fade-in" : ""}`}>{distance}</p>
           </section>
           <section>
             <h1>est. travel time</h1>
-            <p className={`${isVisibile ? "fade-in" : ""}`}>{travel}</p>
+            <p className={`${isFadeIn ? "fade-in" : ""}`}>{travel}</p>
           </section>
         </section>
       </section>

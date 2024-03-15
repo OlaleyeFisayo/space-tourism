@@ -1,24 +1,22 @@
 .crews {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   align-items: flex-end;
-
   @media (max-width: 1200px) {
     flex-direction: column;
     align-items: center;
   }
-
   @media (max-width: 730px) {
     flex-direction: column-reverse;
   }
-
   .text-side {
     @media (max-width: 730px) {
       display: flex;
       flex-direction: column-reverse;
     }
-
     .crew-member-role {
+      opacity: 0;
       color: #fff;
       font-family: "Bellefair";
       font-size: 2rem;
@@ -27,21 +25,19 @@
       opacity: 0.5;
       margin-bottom: 0.94rem;
       margin-top: 9.62rem;
-
       @media (max-width: 1200px) {
         margin-top: 3.75rem;
         margin-bottom: 0.5;
         font-size: 1.5rem;
         text-align: center;
       }
-
       @media (max-width: 730px) {
         margin-top: 2rem;
         font-size: 1rem;
       }
     }
-
     .crew-memeber-name {
+      opacity: 0;
       color: #fff;
       font-family: "Bellefair";
       font-size: 3.5rem;
@@ -50,7 +46,6 @@
       margin-bottom: 1.69rem;
       max-width: 488px;
       width: 100%;
-
       @media (max-width: 1200px) {
         text-align: center;
         font-size: 2.5rem;
@@ -61,8 +56,8 @@
         font-size: 1.5rem;
       }
     }
-
     .crew-member-details {
+      opacity: 0;
       max-width: 27.75rem;
       width: 100%;
       color: #d0d6f9;
@@ -71,7 +66,6 @@
       font-weight: 400;
       line-height: 2rem;
       margin-bottom: 7.5rem;
-
       @media (max-width: 1200px) {
         text-align: center;
         line-height: 1.75rem;
@@ -79,28 +73,23 @@
         max-width: 28.625rem;
         margin-bottom: 2.5rem;
       }
-
       @media (max-width: 730px) {
         font-size: 0.94rem;
         line-height: 1.56rem;
       }
     }
-
     .crew-member-toggle {
       display: flex;
       gap: 1.5rem;
       margin-bottom: 5.88rem;
-
       @media (max-width: 1200px) {
         justify-content: center;
         margin-bottom: 2.5rem;
       }
-
       @media (max-width: 730px) {
         margin-top: 2rem;
         margin-bottom: 0;
       }
-
       li {
         list-style: none;
         width: 9px;
@@ -111,35 +100,30 @@
         opacity: 0.25;
         transition: 500ms ease-in-out;
       }
-
       li.active {
         opacity: 1 !important;
       }
-
       li:hover {
         opacity: 0.6 !important;
       }
     }
   }
-
   .img-side {
     max-width: 35.5045rem;
     width: 100%;
-
+    height: 38.5045rem;
+    opacity: 0;
     @media (max-width: 730px) {
       margin-top: 2rem;
       border-bottom: 0.1rem solid #383b4b;
       text-align: center;
+      max-width: 13.875rem;
+      height: auto;
     }
-
     img {
       width: 100%;
       height: 100%;
-
-      @media (max-width: 730px) {
-        max-width: 11.07019rem;
-        max-width: 13.875rem;
-      }
+      object-fit: contain;
     }
   }
 }
