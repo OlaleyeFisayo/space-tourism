@@ -1,3 +1,4 @@
+import { useFadeIn } from "../../hook/useFadeIn";
 import "./index.scss";
 
 interface Props {
@@ -18,6 +19,8 @@ export default function Technologies({
   description,
   image,
 }: Props) {
+  const { isFadeIn } = useFadeIn(number);
+
   return (
     <section id="technologies">
       <section className="text-side">
@@ -43,11 +46,11 @@ export default function Technologies({
         </ul>
         <section className="about">
           <h1>The technology...</h1>
-          <h2>{name}</h2>
-          <p>{description}</p>
+          <h2 className={`${isFadeIn ? "fade-in" : ""}`}>{name}</h2>
+          <p className={`${isFadeIn ? "fade-in" : ""}`}>{description}</p>
         </section>
       </section>
-      <section className="img-side">
+      <section className={`img-side ${isFadeIn ? "fade-in" : ""}`}>
         <picture>
           <source media="(min-width: 1200px)" srcSet={image.portrait} />
           <img src={image.landscape} alt="" />
