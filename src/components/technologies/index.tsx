@@ -53,7 +53,7 @@ export default function Technologies({
       <section className={`img-side ${isFadeIn ? "fade-in" : ""}`}>
         <picture>
           <source media="(min-width: 1200px)" srcSet={image.portrait} />
-          <img src={image.landscape} alt="" />
+          <img src={image.landscape} alt="" loading="lazy" />
         </picture>
       </section>
     </section>

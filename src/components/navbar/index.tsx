@@ -15,12 +15,13 @@ export default function Navbar() {
   return (
     <section className="nav-container">
       <nav id="desktop-view">
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" loading="lazy" />
         <ul className="nav-list">
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "")}
-              to=".."            >
+              to=".."
+            >
               <p>
                 <span className="bold">00</span>Home
               </p>
@@ -61,7 +62,7 @@ export default function Navbar() {
 
       <nav id="mobile-view">
         <section className="img-container">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" loading="lazy"/>
         </section>
         <section className="hamburger" role="button" onClick={changeToggle}>
           <img src={hamburgerIcon} alt="hamburger icon" />

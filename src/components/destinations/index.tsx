@@ -28,7 +28,7 @@ export default function Destinations({
       <section className={`img-side ${isFadeIn ? "fade-in" : ""}`}>
         <picture className={`${isFadeIn ? "fade-in" : ""}`}>
           <source media="(max-width: 700px)" srcSet={images.webp} />
-          <img src={images.png} alt={active} />
+          <img src={images.png} alt={active} loading="lazy" />
         </picture>
       </section>
       <section className="text-side">
