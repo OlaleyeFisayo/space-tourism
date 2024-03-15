@@ -67,7 +67,7 @@ export default function Navbar() {
         <section className="hamburger" role="button" onClick={changeToggle}>
           <img src={hamburgerIcon} alt="hamburger icon" />
         </section>
-        <section className={toggle ? "nav" : "nav active"}>
+        <section className={!toggle ? "nav" : "nav active"}>
           <section
             className="img-container"
             role="button"
